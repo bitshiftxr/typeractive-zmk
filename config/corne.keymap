@@ -20,7 +20,6 @@
     behaviors {
         hm_s_l: hm_s_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM_S_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -33,7 +32,6 @@
 
         hm_s_r: hm_s_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM_S_R";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -46,7 +44,6 @@
 
         hm_l: hm_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -60,7 +57,6 @@
 
         hm_r: hm_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM_R";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -74,7 +70,6 @@
 
         bt_clr_3_tap: bt_clr_3_tap {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_CLR_3_TAP";
             #binding-cells = <0>;
             bindings = <&none>, <&none>, <&bt BT_CLR>;
         };
@@ -118,7 +113,7 @@
         Navigation {
             display-name = "Nav";
             bindings = <
-&trans  &none         &none     &none      &none      &none     &kp PG_UP      &kp BACKSPACE  &kp UP      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+&trans  &none         &none     &none      &none      &none     &kp PG_UP      &kp BACKSPACE  &kp UP      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSLH
 &trans  &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp PAGE_DOWN  &kp LEFT       &kp DOWN    &kp RIGHT         &kp MINUS          &kp EQUAL
 &trans  &none         &none     &none      &none      &none     &kp HOME       &kp END        &kp INSERT  &kp DELETE        &kp QMARK          &trans
                                 &trans     &trans     &trans    &trans         &trans         &trans
