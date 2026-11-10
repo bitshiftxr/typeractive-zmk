@@ -1,4 +1,4 @@
-# Vendored from zmkfirmware/zmk@v0.3; checkout bumped to v5 for Node 24.
+# Vendored from zmkfirmware/zmk@v0.3; actions bumped for Node 24.
 name: Reusable user config build
 
 on:
@@ -92,7 +92,7 @@ jobs:
           fi
 
       - name: Cache west modules
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         continue-on-error: true
         env:
           cache_name: cache-zephyr-${{ env.zephyr_version }}-modules
@@ -162,7 +162,7 @@ jobs:
           fi
 
       - name: Archive (${{ env.display_name }})
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: artifact-${{ env.artifact_name }}
           path: ${{ env.build_dir }}/artifacts
@@ -173,7 +173,7 @@ jobs:
     name: Merge Output Artifacts
     steps:
       - name: Merge Artifacts
-        uses: actions/upload-artifact/merge@v4
+        uses: actions/upload-artifact/merge@v7
         with:
           name: ${{ inputs.archive_name }}
           pattern: artifact-*
