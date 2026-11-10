@@ -1,11 +1,8 @@
-
 name: Build ZMK firmware
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 on: [workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    uses: ./.github/workflows/build-user-config.yml
     with:
       archive_name: firmware-${{ github.ref_name }}-${{ github.run_number }}.zip
